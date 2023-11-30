@@ -4,19 +4,19 @@
     "description": "webcomic rss feed reader",
     "main": "server.js",
     "scripts": {
-      "start": "node server.js",
-      "watch": "nodemon",
-      "seed": "node seeders/seed.js"
+        "start": "node server.js",
+        "watch": "nodemon",
+        "seed": "node seeders/seed.js"
     },
     "keywords": [],
     "author": "abby johnson",
     "license": "MIT",
     "dependencies": {
-      "express": "^4.17.2",
-      "mongoose": "^7.0.2"
+        "dotenv": "^16.3.1",
+        "express": "^4.17.2",
+        "mongoose": "^7.0.2"
     },
     "devDependencies": {
-      "nodemon": "^2.0.3"
+        "nodemon": "^2.0.3"
     }
-  }
-  
+}
