@@ -4,7 +4,7 @@ const { Comic } = require('../models');
 async function getComics(req, res) {
     try {
         const allComics = await Comic.find();
-        res.status(200).json(allComics)
+        res.json(allComics)
     } catch (err) {
         res.status(500).json(err);
         console.log(err)
@@ -14,12 +14,12 @@ async function getComics(req, res) {
 // Function to get one comic
 async function getMyComic(req, res) {
     try {
-        const myComic = await Comic.findOne({ _id: req.params.comic-id })
+        const myComic = await Comic.findOne({ _id: req.params.comicID })
 
         if(!myComic) {
             return res.status(404).json({ message: 'No comic with that ID found :-(' })
         }
-        res.status(200).json(myComic);
+        res.json(myComic);
     } catch (err) {
         res.status(500).json(err);
         console.log(err)
@@ -41,7 +41,7 @@ async function createComic(req, res) {
             rss: req.body.rss,  
             homepage: req.body.homepage
         })
-        res.status(200).json({ message: "New comic added~" , newComic})
+        res.json({ message: "New comic added~" , newComic})
     } catch (err) {
         res.status(500).json(err);
         console.log(err)
@@ -52,7 +52,7 @@ async function createComic(req, res) {
 async function editComic(req, res) {
     try {
         const myComic = await Comic.findOneAndUpdate(
-            { _id: req.params.comic-id },
+            { _id: req.params.comicID },
             { $set: req.body },
             { runValidators: true, new: true }
         )
@@ -61,7 +61,7 @@ async function editComic(req, res) {
             res.statys(404).json({ message: "No comic with that ID found, please try again!"})
         }
 
-        res.status(200).json({message: "Comic updated successfully!", myComic})
+        res.json({message: "Comic updated successfully!", myComic})
     } catch (err) {
         res.status(500).json(err);
         console.log(err)
@@ -71,7 +71,7 @@ async function editComic(req, res) {
 // Function to remove comic from database by id
 async function removeComic(req, res) {
     try {
-        const myComic = await Comic.findOneAndDelete({ _id: req.params.comic-id })
+        const myComic = await Comic.findOneAndDelete({ _id: req.params.comicID })
 
         if(!myComic) {
             return res.status(404).json({ message: "No comic with that ID found :-("})

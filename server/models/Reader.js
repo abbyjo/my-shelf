@@ -32,9 +32,8 @@ const readerSchema = new Schema(
     },
     admin: {
       type: Boolean,
-      required: true,
-      default: 'false'
-    }
+      default: false,
+    },
   },
   {
     toJSON: {
@@ -44,7 +43,7 @@ const readerSchema = new Schema(
 );
 
 // Virtual - gets total amount of stories in reader's collection
-userSchema.virtual('comicCount').get(function () {
+readerSchema.virtual('comicCount').get(function () {
   return this.savedComics.length;
 });
 
@@ -59,7 +58,7 @@ readerSchema.pre('save', async function (next) {
 });
 
 // Method to check password against hashed db value
-userSchema.methods.isCorrectPassword = async function (password) {
+readerSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 

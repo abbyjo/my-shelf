@@ -14,7 +14,7 @@ const {
 // "myshelf.com/api/readers"
 // Gets all readers, creates new reader
 // If logged in: edits reader acct info or adds a comic to reader's shelf
-router.route('/').get(getReaders).post(createReader).put(authMiddleware, editReader, saveComic);
+router.route('/').get(getReaders).post(createReader).put(authMiddleware, saveComic);
 
 // "myshelf.com/api/readers/login"
 // Logs in reader
@@ -26,10 +26,10 @@ router.route('/me').get(authMiddleware, getMyReader);
 
 // "myshelf.com/api/readers/:reader-id"
 // Gets a specific reader's data by ID 
-router.route('/:reader-id').get(getMyReader);
+router.route('/:readerID').get(getMyReader).put(editReader);
 
 // "myshelf.com/api/readers/:reader-id"
 // By comic-id: if logged in, removes specific comic by ID (from reader's shelf)
-router.route('/:comic-id').delete(authMiddleware, removeComic);
+router.route('/:comicID').delete(authMiddleware, removeComic);
 
 module.exports = router;
