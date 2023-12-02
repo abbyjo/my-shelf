@@ -18,6 +18,7 @@ const comicSchema = new Schema({
   },
   homepage: {
     type: String,
+    required: true,
   },
   // Array of links- other locations comic is posted
   mirrors: [
