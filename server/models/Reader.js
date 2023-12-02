@@ -29,6 +29,11 @@ const readerSchema = new Schema(
     icon: {
       type: String,
       required: true,
+    },
+    admin: {
+      type: Boolean,
+      required: true,
+      default: 'false'
     }
   },
   {
