@@ -1,10 +1,10 @@
 const { Schema, model } = require('mongoose');
 
 const comicSchema = new Schema({
+  // For v1.0 array of names, v2.0 can link to objectIDS/actual accounts
   authors: [
     {
-      type: Schema.Types.ObjectId,
-      ref: 'Author',
+      type: String,
       required: true,
     },
   ],
