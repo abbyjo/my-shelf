@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { authMiddleware } = require('../../utils/auth');
 
 const {
   createReader,
@@ -9,9 +10,6 @@ const {
   removeComic,
   login,
 } = require('../../controllers/reader-controllers');
-
-// TODO: create middleware function for auth
-const { authMiddleware } = require('../../utils/auth');
 
 // "myshelf.com/api/readers"
 // Gets all readers, creates new reader
