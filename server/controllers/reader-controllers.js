@@ -1,4 +1,4 @@
-const { Reader, Comic } = require('../models');
+const { Reader } = require('../models');
 const { signToken } = require('../utils/auth');
 
 // Function to create new reader acct

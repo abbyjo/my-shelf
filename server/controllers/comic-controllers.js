@@ -27,19 +27,19 @@ async function getMyComic(req, res) {
 };
 
 // Function to create new comic 
-async function createComic(req, res) {
+async function createComic({body}, res) {
     try {  
         const newComic = await Comic.create({
-            title: req.body.title,
-            authors: req.body.authors,
-            description: req.body.desc,
-            cover:req.body.cover,
-            mirrors: req.body.mirrors, //not REQ
-            genre: req.body.genre,
-            tags: req.body.tags, //not REQ
-            status: req.body.status, //not REQ - default true
-            rss: req.body.rss,  
-            homepage: req.body.homepage
+            title: body.title,
+            authors: body.authors,
+            description: body.desc,
+            cover:body.cover,
+            mirrors: body.mirrors, //not REQ
+            genre: body.genre,
+            tags: body.tags, //not REQ
+            status: body.status, //not REQ - default true
+            rss: body.rss,  
+            homepage: body.homepage
         })
         res.json({ message: "New comic added~" , newComic})
     } catch (err) {
