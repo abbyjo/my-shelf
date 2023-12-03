@@ -38,7 +38,7 @@ async function login({ body }, res) {
             return res.status(400).json({ message: 'Wrong password!' });
         }
         const token = signToken(myReader);
-        res.json({ token, myReader });
+        res.json({ message: "Login successfull! :-)", token, myReader });
     } catch (err) {
         res.status(500).json(err);
         console.log(err);
@@ -60,7 +60,7 @@ async function getReaders(req, res) {
 async function getMyReader({ user = null, params }, res) {
     try {
         const myReader = await Reader.findOne({
-            $or: [{ _id: user ? user._id : params.id }, { username: params.username }],
+            $or: [{ _id: user ? user._id : params.readerID }, { username: params.username }],
         });
 
         if (!myReader) {
