@@ -1,17 +1,40 @@
 import { Link, useLocation } from 'react-router-dom';
 
-const Navbar = () => {
-    return (
-      <header className="">
-        <div className="">
-          <Link className="" to="/">
-            <h1>myShelf</h1>
-          </Link>
-          <p>What's on your shelf?</p>
-        </div>
-      </header>
-    );
-  };
-  
-  export default Navbar;
-  
+function Navbar() {
+  const currentPage = useLocation().pathname;
+  return (
+    <nav className="navbar pt-3" >
+    <ul className='navbar-nav container-fluid'>
+      <li className="nav-item ">
+        <button className="custom-nav-btn px-3">
+          <Link
+          to="/"
+          className={currentPage === '/' ? 'nav-link active' : 'nav-link'}>
+          Home
+        </Link>
+        </button>
+      </li>
+      <li className="nav-item ">
+        <button className="custom-nav-btn px-3">
+          <Link
+          to="/login"
+          className={currentPage === '/login' ? 'nav-link active' : 'nav-link'}>
+          Login
+        </Link>
+        </button>
+      </li>
+      <li className="nav-item ">
+        <button className="custom-nav-btn px-3">
+         <Link
+          to="/signup"
+          className={currentPage === '/signup' ? 'nav-link active' : 'nav-link'}>
+          Signup
+        </Link> 
+        </button>
+      </li>
+    </ul>
+    </nav>
+  );
+};
+
+export default Navbar;

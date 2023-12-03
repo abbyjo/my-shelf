@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global button styling */
+button {
+  border-radius: 16px;
+  margin: 5px;
+  border:none;
+}
+
+/* Nav specific button styles */
+.custom-nav-btn{
+  background-color:white
+}
+
+a{
+  text-decoration: none;
+}
