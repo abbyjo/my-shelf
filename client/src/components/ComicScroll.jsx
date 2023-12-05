@@ -1,6 +1,9 @@
+import { useState, useEffect } from 'react';
 import ComicCard from './ComicCard';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
+import { getComics } from '../utils/api';
 
 const responsive = {
     desktop: {
@@ -21,7 +24,29 @@ const responsive = {
 };
 
 function ComicScroll(props) {
-
+    const [comics, setComicData] = useState([]);
+    // const getMyComics = async () => {
+    //     const response = await getComics();
+    //     setResults(data.data);
+    //   };
+    useEffect(() => {
+        const getArchive = async () => {
+          try {
+            const response = await getComics();
+    
+            if (!response.ok) {
+              throw new Error('something went wrong!');
+            }
+    
+            const comics = await response.json();
+            setComicData(comics);
+          } catch (err) {
+            console.error(err);
+          }
+        };
+    
+        getArchive();
+      }, []);
 
     return (
         <div>
@@ -43,29 +68,16 @@ function ComicScroll(props) {
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px"
             >
-                <ComicCard 
-                    src="https://www.hlj.com/productimages/fru/fruamu-fnx945_0.jpg"
-                    title="Miku 1"              
-                />
-                <ComicCard 
-                    src="https://onlyfigure.com/cdn/shop/collections/Adsiz_tasarim-45_1200x1200.png?v=1683379988"
-                    title="Miku 2"              
-                />
-                <ComicCard 
-                    src="https://special.goodsmile.info/miku15th/images/img_product_scale.png"
-                    title="Miku 3"              
-                />
-                <ComicCard 
-                    src="https://resize.cdn.otakumode.com/ex/1000.1000/shop/product/ca7063108692469090dc8aba79384202.jpg"
-                    title="Miku 4"              
-                />
-                <ComicCard 
-                    src="https://www.eknightmedia.com/media/catalog/product/t/4/t40121_00_.png"
-                    title="Miku 5"              
-                />
+                {comics.map((comic)=> {
+                    return (
+                        <ComicCard 
+                    src={comic.cover}
+                    title={comic.title}              
+                    />)
+                })}
             </Carousel>;
         </div>
     )
-}
+};
 
 export default ComicScroll;
