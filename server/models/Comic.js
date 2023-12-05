@@ -8,6 +8,10 @@ const comicSchema = new Schema({
       required: true,
     },
   ],
+  authorLink: {
+    type: String,
+    required: true
+  },
   description: {
     type: String,
     required: true,
@@ -44,7 +48,7 @@ const comicSchema = new Schema({
   // Boolean value denotes if active or on hiatus
   status: {
     type: Boolean,
-    default: 'true'
+    default: true
   },
   rss: {
     type: String,

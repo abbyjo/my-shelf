@@ -1,0 +1,92 @@
+[
+    {
+        "authors": "NuclearPasta",
+        "authorLink" : "https://www.spiderforest.com/user?username=Nuclearpasta",
+        "description":"Lady Landabella Trastan, a noblewoman from the rich city of Vezenia, travels across the desert with a skimpy escort. Her quest: to kill the 'evil witch' that resides in the fortress of Saltfall. Her motives: unknown. What is certain is that she hugely underestimates the task.",
+        "cover": "https://64.media.tumblr.com/99038ea12cc110aedd9ec024ee42f82a/8543f30b829d22c2-43/s1280x1920/103c4edd5422f95c439e8586e754ad475865a3d9.jpg",
+        "homepage": "https://tenearthshatteringblows.com",
+        "title": "Ten Earth Shattering Blows",
+        "genre": ["Action", "Adventure", "Fantasy", "Post-Apocolypse"],
+        "tags": ["low fantasy", "female warrior", "monsters"],
+        "rss": "http://tenearthshatteringblows.com/feed"
+    },
+    {
+        "authors": "Christina Major",
+        "authorLink" : "https://delphina2k.tumblr.com/",
+        "description": "Sombulus is a humorous fantasy adventure in the spirit of Discworld and style of a shounen manga. A zealous paladin, brilliant energy harvester, and curious spiky haired tinkerer set off on fantastic adventures through the strange, surreal, magical and mystery-riddled Myriad Worlds of Sombulus, leaving each place a little more weird than the last.",
+        "cover": "https://cd11cb33fda52aad8dd5.cdn6.editmysite.com/uploads/b/cd11cb33fda52aad8dd55795753a37ed9068c69fc5f14702742bfb9d67b5d54d/trio_botheringrana_1645378440.jpg?width=800&optimize=medium",
+        "homepage": "https://www.sombulus.com/",
+        "title": "Sombulus",
+        "genre": ["Action", "Adventure", "Comedy", "Fantasy"],
+        "tags": ["found family", "magic", "friendship", "lgtbqia+ characters"],
+        "rss": "https://www.sombulus.com/feed"
+    },
+    {
+        "authors": "Jackarais",
+        "authorLink" : "https://bicycleboyblog.tumblr.com",
+        "description": "Bicycle Boy is a post-apocalyptic sci-fi adventure comic by Jackarais. Our protagonist--a cyborg who calls himself 'Poet'--cannot recall anything before the day he woke up in the middle of the desert, surrounded by corpses. With no memories, no purpose and no idea what the hell is going on, he sets out to find answers.",
+        "cover": "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1egpoblinh4m3jv1fpl1h1mgltm.png",
+        "homepage": "https://www.bicycleboy.net/",
+        "title": "Bicycle Boy",
+        "genre": ["Action", "Post-Apocolypse","Sci-fi", "Adventure"],
+        "tags": ["gore", "cyborg", "lgbt+", "punching"],
+        "rss": "https://www.bicycleboy.net/comic/rss"
+    },
+    {
+        "authors": ["Krispy", "Space", "studioCARTRIDGE"],
+        "authorLink" : "https://ghostjunksickness.tumblr.com/about",
+        "description": "GJS is a comic about two bounty hunters with an unstable dynamic who are pushed to pursue the deadly and elusive bounty dubbed The Ghost.",
+        "cover": "https://hivemill.com/cdn/shop/products/BookoneIllustration.jpg?v=1656886298&width=493",
+        "homepage": "https://www.ghostjunksickness.com/",
+        "title": "Ghost Junk Sickness",
+        "genre": ["Action", "Post-Apocolypse","Sci-fi", "Adventure"],
+        "tags": ["gore", "violence", "eldritch beings", "lgbtq+", "mature"],
+        "rss": "https://www.ghostjunksickness.com/comic/rss"
+    },
+    {
+        "authors": ["Krispy", "Space", "studioCARTRIDGE"],
+        "authorLink" : "http://lunarblight.com/about",
+        "description": "Jun Ryeo is a soft-spoken knight of the Moonlit Sanctuary sworn to protect humanity and gain the favour of the Moon. When a strange hunter scientist arrives with dreadful news of a powerful vampire threatening life as they know it, Jun and his fellow knights are deployed immediately with their unwelcome company. The journey is fraught with speculations of what it truly means to be a knight of the Lunar Guard and who the sanctuary is really protecting. Jun knows that he’s different from his allies and this question grates on him all the more painfully as he continues to cut down creatures that dwell in the shadows. With discord slowly brewing back at the Sanctuary, Jun must face the lie he’s grown to call home or embrace the darkness he knows lurking within him.",
+        "cover": "http://lunarblight.com/comics/1677432163-LunarBlightposter%20smol.jpg",
+        "homepage": "http://lunarblight.com/",
+        "title": "Lunar Blight",
+        "genre": ["Gothic", "Action", "Fantasy", "Horror"],
+        "tags": ["gore", "blood", "lgbtq+", "monsters", "vampires"],
+        "rss": "http://lunarblight.com/comic/rss"
+    },
+    {
+        "authors": ["Mars Heyward"],
+        "authorLink" : "https://www.marsoid.net/links.html",
+        "mirrors":["https://tapas.io/series/Ride-or-Die", "https://www.webtoons.com/en/canvas/ride-or-die/list?title_no=720539"],
+        "description": "After finding a car once owned by his mother, Lucky and his childhood-crush Vick are launched into the world of street racing in an effort to learn more about her. But what they don't know is something's lurking under the hood of the car, something fueled by revenge...and gasoline. It’s Christine meets Ghost Rider meets Fast and Furious but gayer!",
+        "cover": "https://www.rideordiecomic.com/comics/1626111144-000%20v2.png",
+        "homepage": "https://www.rideordiecomic.com/",
+        "title": "Ride or Die",
+        "genre": ["Action", "Romance", "Comedy", "Modern"],
+        "tags": ["cars", "lgbt+", "demons", "drug use", "mature themes"],
+        "rss": "https://www.rideordiecomic.com/comic/rss"
+    },
+    {
+        "authors": ["KP"],
+        "authorLink" : "http://www.kendrap.com/",
+        "description": "Goma, a wayward Orcish soldier, finds herself in Fairmeadow, a commune of pacifists deep in the Cascadian wilderness. Isolation has allowed the commune to thrive in the shadow of a century-long war, but Goma’s arrival brings troubling reminders of the world outside to those who have settled there in search of respite.  Fairmeadow’s enigmatic leader, Sanctuary, finds his utopian vision challenged as he struggles to keep the peace. Their self-sufficiency exists on thin margins - margins that threaten to break if Goma cannot learn to live alongside those who she has sworn to fight. Fairmeadow is a post-epic fantasy drama inspired by the counter-cultural movements of the late 60’s, the landscapes of the Pacific Northwest, and tabletop RPG’s. It’s about the collision of idealism against pragmatism, reckoning with the consequences of dropping out, and trying to make its readers want to go on a hike.",
+        "cover": "https://images.squarespace-cdn.com/content/v1/531d4407e4b030d9a208785f/1667969434940-H2SZE24FF36BKOQME8GI/ch03_promo.png?format=500w",
+        "homepage": "https://fairmeadowcomic.com/",
+        "title": "Fairmeadow",
+        "genre": ["Fantasy", "Drama"],
+        "tags": ["post-epic", "mountains", "female warrior", "found family", "lgbt+"],
+        "rss": "https://www.fairmeadowcomic.com/comic/rss"
+    },
+    {
+        "authors": ["Claire Niebergall"],
+        "authorLink" : "https://phantomarine.tumblr.com/",
+        "mirrors": ["https://www.webtoons.com/en/canvas/phantomarine/list?title_no=915643"],
+        "description": "Phantomarine is a spooky-but-sweet fantasy webcomic about a ghostly princess and her perilous journey across a haunted sea, hoping to save her soul from a devious, shapeshifting death god known as the Red Tide King. Expect all manner of maritime mysteries – monstrous sea creatures, sacred lighthouses, strange afflictions, accursed marauders, feuding gods, grand sea battles, and a heaping helping of humor in-between!",
+        "cover": "https://64.media.tumblr.com/c4f62249a0c0996786177bbffe91d024/871541bbfd9bc712-fc/s1280x1920/b4affd9deb5afa30c39b9f3ec3961910c054b4b6.png",
+        "homepage": "https://www.phantomarine.com/",
+        "title": "Phantomarine",
+        "genre": ["Action", "Supernatural", "Adventure", "Fantasy"],
+        "tags": ["gods", "ghosts", "lgbt+", "dark humor"],
+        "rss": "https://www.phantomarine.com/comic/rss"
+    }
+]
