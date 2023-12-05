@@ -6,10 +6,12 @@ const Home = () => {
     return (
       <main>
         <Search />
-        <ComicScroll />
-
-
-
+        <ComicScroll 
+          sort="popular"
+        />
+        <ComicScroll 
+          sort= "recent"
+        />
       </main>
     );
   };

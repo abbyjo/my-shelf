@@ -20,7 +20,7 @@ const responsive = {
     }
 };
 
-function ComicScroll() {
+function ComicScroll(props) {
 
 
     return (
