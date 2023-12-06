@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         path: '/signup',
         element: <Signup />
       }, {
-        path: '/comic',
+        path: '/comic/:comicID',
         element: <Comic />
       }, {
         path: '/my-feed',

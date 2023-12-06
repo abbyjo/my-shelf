@@ -13,7 +13,7 @@ function ComicCard(props) {
         <div className="text-center p-3">
             <img style={styles.img} src={props.src} className="card-img-top" alt="..." />
             <div className="card-body">
-                <h5 className="card-title pt-3">{props.title}</h5>
+                <h5 className="card-title pt-2">{props.title}</h5>
             </div>
         </div>
     )
