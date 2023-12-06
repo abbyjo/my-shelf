@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import ComicCard from './ComicCard';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
