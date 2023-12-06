@@ -1,4 +1,6 @@
 const { Comic } = require('../models');
+const Parser = require('rss-parser');
+let parser = new Parser();
 
 // Function to get all comics
 async function getComics(req, res) {
@@ -84,10 +86,30 @@ async function removeComic(req, res) {
     }
 };
 
+// Function to parse RSS feed data
+async function getRSS(req, res) {
+    try {
+        const feed = await parser.parseURL(req.body.rss);
+        let entries = [];
+
+        if(!feed) {
+            return res.status(404).json({ message: "Please enter a valid RSS feed URL!"})
+        }
+        feed.items.forEach(item => {
+            entries.push({ item })
+        })
+        res.json(entries)
+    } catch (err) {
+        res.status(500).json(err);
+        console.log(err); 
+    }
+};
+
 module.exports = {
     createComic,
     getComics,
     getMyComic,
     editComic,
-    removeComic
+    removeComic,
+    getRSS
 }

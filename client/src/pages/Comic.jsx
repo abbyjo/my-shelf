@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom'
 import { saveComic, removeComic, getOneComic } from '../utils/api';
-import ComicCard from '../components/ComicCard';
+import RssFeed from '../components/RssFeed';
 
 import '../styles/ComicPage.css';
 
@@ -57,6 +57,7 @@ const Comic = () => {
           <div className="col">
             <h5>Latest Updates</h5>
             <p >RSS component will go here </p>
+            <RssFeed />
           </div>
         </div>
 
