@@ -89,16 +89,16 @@ async function removeComic(req, res) {
 // Function to parse RSS feed data
 async function getRSS(req, res) {
     try {
+        let comics = [];
         const feed = await parser.parseURL(req.body.rss);
-        let entries = [];
 
         if(!feed) {
             return res.status(404).json({ message: "Please enter a valid RSS feed URL!"})
         }
         feed.items.forEach(item => {
-            entries.push({ item })
+            comics.push({ item })
         })
-        res.json(entries)
+        res.json(comics)
     } catch (err) {
         res.status(500).json(err);
         console.log(err); 

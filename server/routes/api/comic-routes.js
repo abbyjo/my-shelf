@@ -17,8 +17,8 @@ router.route('/').get(getComics).post(createComic);
 // Search by comic-id: gets, edits or deletes one comic (from DB)
 router.route('/:comicID').get(getMyComic).put(editComic).delete(removeComic);
 
-// "myshelf.com/api/comics/:comicID/RSS"
+// "myshelf.com/api/comics/rss"
 // Gets recent rss feed data from one comic
-router.route('/:comicID/rss').post(getRSS)
+router.route('/rss').post(getRSS)
 
 module.exports = router;

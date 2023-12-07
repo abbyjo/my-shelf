@@ -7,6 +7,7 @@ import '../styles/ComicPage.css';
 
 const Comic = () => {
   let {comicID} = useParams();
+  const [loaded, setLoad] = useState(false);
   const [oneComic, setComicData] = useState([]);
   useEffect(() => {
       const getComicData = async () => {
@@ -19,6 +20,7 @@ const Comic = () => {
   
           const comic = await response.json();
           setComicData(comic);
+          setLoad(true);
         } catch (err) {
           console.error(err);
         }
@@ -50,14 +52,19 @@ const Comic = () => {
             <div>
               <h5> Genres List </h5>
               <h5>TAG LIST</h5>
+              <a href={oneComic.homepage} target="_blank" rel="noopener noreferrer"><h5>Full Archive</h5></a>
             </div>
           </div>
         </div>
         <div className="row p-5 m-3">
           <div className="col">
             <h5>Latest Updates</h5>
-            <p >RSS component will go here </p>
-            <RssFeed />
+            { loaded ? ( 
+              <RssFeed url={oneComic.rss} reload={oneComic}/>
+            ): (
+              <p>LOADING...</p>
+            )
+              }
           </div>
         </div>
 

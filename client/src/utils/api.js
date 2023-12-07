@@ -106,3 +106,13 @@ export const editComic = (comicID, comicData) => {
       body: JSON.stringify(comicData)
     });
 };
+
+export const getRSS = ( rssURL ) => {
+  return fetch('/api/comics/rss', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({rss: rssURL}),
+  });
+};
