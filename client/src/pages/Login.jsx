@@ -1,7 +1,7 @@
 const Login = () => {
 
     return (
-      <section className="container mx-4">
+      <section className="mx-4">
         <form className="m-5 align-items-center">
           <div className="mb-3 w-75">
             <label for="email" className="form-label">Username</label>
