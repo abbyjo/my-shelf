@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { getRSS } from '../utils/api';
 import dayjs from 'dayjs';
 
-function RssReader(props) {
+function RssFeed(props) {
     const [updates, setUpdates] = useState([]);
     
     useEffect(() => {
@@ -45,4 +45,4 @@ function RssReader(props) {
 
 }
 
-export default RssReader;
+export default RssFeed;

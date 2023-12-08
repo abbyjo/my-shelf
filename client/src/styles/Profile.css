@@ -1,0 +1,10 @@
+.id-container{
+    max-width:80%
+}
+
+.reader-icon {
+    max-width: 95%;
+    min-width: 85px ;
+    object-fit: cover;
+    margin: 15px;
+}
