@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 // App pages
 import App from './App.jsx'
 import Home from './pages/Home.jsx'
-import Feed from './pages/Feed.jsx'
 import Comic from './pages/Comic'
 import Login from './pages/Login.jsx'
 import Signup from './pages/Signup.jsx'
@@ -32,9 +31,6 @@ const router = createBrowserRouter([
       }, {
         path: '/comic/:comicID',
         element: <Comic />
-      }, {
-        path: '/my-feed',
-        element: <Feed />
       }, {
         path: '/profile',
         element: <Profile />

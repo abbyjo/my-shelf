@@ -1,9 +1,10 @@
-import decode from 'jwt-decode';
+// import decode from 'jwt-decode';
+import { jwtDecode } from "jwt-decode";
 
 class AuthService {
   // Function to get user data 
   getProfile() {
-    return decode(this.getToken());
+    return jwtDecode(this.getToken());
   };
 
   // Function to check if user's logged in (Checks if there is a saved token and it's still valid)
@@ -15,7 +16,7 @@ class AuthService {
   // Checks if token is expired
   isTokenExpired(token) {
     try {
-      const decoded = decode(token);
+      const decoded = jwtDecode(token);
       if (decoded.exp < Date.now() / 1000) {
         return true;
       } else return false;
@@ -32,7 +33,7 @@ class AuthService {
 // Saves user token to localStorage
   login(idToken) {
     localStorage.setItem('id_token', idToken);
-    window.location.assign('/');
+    window.location.assign('/profile');
   };
 
 // Clear user token and profile data from localStorage
