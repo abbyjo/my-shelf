@@ -43,7 +43,7 @@ const Login = () => {
             (<div className="mb-3 w-75 alert alert-danger alert-dismissible" role="alert" >
             Username or password is incorrect. Please try again!
           </div>) :
-          <div></div>}
+          (<div></div>)}
           <div className="mb-3 w-75">
             <label htmlFor="username" className="form-label">Username</label>
             <input type="text" className="form-control" id="username" onChange={handleInputChange} value={loginData.username} />
