@@ -98,7 +98,7 @@ async function saveComic({ user, body }, res) {
     try {
         const updatedReader = await Reader.findOneAndUpdate(
             { _id: user._id },
-            { $addToSet: {savedComics: body.comicID }},
+            { $addToSet: {savedComics: body }},
             { new: true, runValidators: true }
         );
         return res.json({ message: "Comic added to shelf successfully!", updatedReader })
