@@ -1,8 +1,17 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Taviraj', serif;
+  
 }
 
+h1{
+  font-family: 'Chicle', serif;
+}
+
+h2{
+  font-family: 'Neuton', serif;
+}
 /* Global button styling */
 button {
   border-radius: 10px;
@@ -12,10 +21,13 @@ button {
 
 /* Nav specific button styles */
 .custom-nav-btn{
-  background-color:white
+  background-color:#f7f0f0
 }
 
+body{
+  background-color: #ffffff
+}
 a{
   text-decoration: none;
-  color: hotpink;
+  color: #F34213
 }

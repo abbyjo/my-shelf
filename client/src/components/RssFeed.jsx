@@ -31,10 +31,10 @@ function RssFeed(props) {
           {updates.map((item, i) => {
             return (
                 <div key={i} className="row">
-                    <div className="col">
+                    <div className="col mb-3">
                         <p>{dayjs(item.item.pubDate).format('MM/DD/YY')}</p>
                     </div>
-                    <div className="col">
+                    <div className="col mb-3">
                         <a target="_blank" rel="noopener noreferrer" href={item.item.link}>{item.item.title}</a>
                     </div>
                 </div>

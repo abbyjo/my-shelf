@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 const styles = {
     div: {
-        background: "hotpink",
+        background: "#FFBE28",
     }
 };
 

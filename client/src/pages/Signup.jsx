@@ -92,10 +92,10 @@ const Signup = () => {
                 type="radio" 
                 name="icon" 
                 id="icon-1"
-                value="teststring1"
+                value="/assets/icons/icon-1.png"
                 onChange={handleInputChange}
               />
-              <label className="form-check-label" htmlFor="icon-1"><img className="reader-icon" src="https://civilrights.msu.edu/_assets/images/placeholder/placeholder-200x200.jpg" /></label>
+              <label className="form-check-label" htmlFor="icon-1"><img className="reader-icon" src="/assets/icons/icon-1.png" /></label>
             </div>
             <div className="form-check form-check-inline">
               <input 
@@ -103,10 +103,10 @@ const Signup = () => {
                 type="radio" 
                 name="icon" 
                 id="icon-2" 
-                value="test-2"
+                value="/assets/icons/icon-2.png"
                 onChange={handleInputChange} 
               />
-              <label className="form-check-label" htmlFor="icon-2"><img className="reader-icon" src="https://civilrights.msu.edu/_assets/images/placeholder/placeholder-200x200.jpg" /></label>
+              <label className="form-check-label" htmlFor="icon-2"><img className="reader-icon" src="/assets/icons/icon-2.png" /></label>
             </div>
             <div className="form-check form-check-inline">
               <input 

@@ -57,10 +57,10 @@ const Comic = () => {
     <section>
       <div className="container text-center p-5">
         <div className="row">
-          <div className="col-sm-8 col-md-6">
+          <div className="col-sm-12 col-md-6">
             <img className="title-img img-fluid" src={oneComic.cover}></img>
           </div>
-          <div className="col-sm-2 col-md-6 text-wrap">
+          <div className="col-sm-12 col-md-6 text-wrap">
             <h2> {oneComic.title} </h2>
             <h5> Created by <Link to={oneComic.authorLink} target="_blank" rel="noopener noreferrer"> {oneComic.authors}</Link> </h5>
             {Auth.loggedIn() ?
