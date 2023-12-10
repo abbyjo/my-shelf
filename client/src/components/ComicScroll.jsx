@@ -71,7 +71,7 @@ function ComicScroll() {
                         <ComicCard
                     key={comic._id} 
                     src={comic.cover}
-                    title={<Link to={`/comic/${comic._id}`}>{comic.title}</Link>     }              
+                    title={<Link to={`/comic/${comic._id}`}>{comic.title}</Link>}              
                     />)
                 })}
             </Carousel>;

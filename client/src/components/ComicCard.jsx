@@ -1,6 +1,6 @@
 const styles = {
     img: {
-        borderRadius: "10px",
+        borderRadius: "20px",
         maxWidth: "300px",
         height: "400px",
         objectFit: "cover",

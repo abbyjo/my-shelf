@@ -61,7 +61,7 @@ async function getMyReader({ user = null, params }, res) {
     try {
         const myReader = await Reader.findOne({
             $or: [{ _id: user ? user._id : params.readerID }, { username: params.username }],
-        });
+        }).populate('savedComics')
 
         if (!myReader) {
             return res.status(400).json({ message: 'No users with this ID found :-(' });
