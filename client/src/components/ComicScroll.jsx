@@ -24,7 +24,7 @@ const responsive = {
     }
 };
 
-function ComicScroll() {
+function ComicScroll(props) {
     const [comics, setComicData] = useState([]);
     useEffect(() => {
         const getArchive = async () => {
@@ -32,11 +32,12 @@ function ComicScroll() {
             const response = await getComics();
     
             if (!response.ok) {
-              throw new Error('something went wrong!');
+              throw new Error('Unable to fetch comic archive!');
             }
     
             const comics = await response.json();
             setComicData(comics);
+
           } catch (err) {
             console.error(err);
           }
@@ -61,19 +62,27 @@ function ComicScroll() {
                 customTransition="all .5"
                 transitionDuration={500}
                 containerClass="carousel-container"
-                removeArrowOnDeviceType={["tablet", "mobile"]}
-                // deviceType={this.props.deviceType}
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px align-items-start"
             >
-                {comics.map((comic)=> {
+                {props.sort === "first" ?
+                comics.map((comic)=> {
                     return (
                         <ComicCard
                     key={comic._id} 
                     src={comic.cover}
                     title={<Link to={`/comic/${comic._id}`}>{comic.title}</Link>}              
                     />)
-                })}
+                }) : 
+                comics.slice(0).reverse().map((comic)=> {
+                    return (
+                        <ComicCard
+                    key={comic._id} 
+                    src={comic.cover}
+                    title={<Link to={`/comic/${comic._id}`}>{comic.title}</Link>}              
+                    />)
+                })
+            }
             </Carousel>;
         </div>
     )

@@ -6,11 +6,12 @@ const Home = () => {
     return (
       <main>
         <Search />
+        <h4 className="text-center mt-5">Recently Added Webcomics</h4>
         <ComicScroll 
-          sort="popular"
+          sort="first"
         />
         <ComicScroll 
-          sort= "recent"
+          sort="last"
         />
       </main>
     );
