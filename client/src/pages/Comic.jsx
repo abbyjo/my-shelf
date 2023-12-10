@@ -4,6 +4,7 @@ import RssFeed from '../components/RssFeed';
 
 import Auth from '../utils/auth';
 import { saveComic, getOneComic } from '../utils/api';
+import { saveComicIDs, getSavedComicIDs } from '../utils/localStorage';
 
 import '../styles/ComicPage.css';
 
@@ -12,6 +13,7 @@ const Comic = () => {
 
   const [loaded, setLoad] = useState(false);
   const [oneComic, setComicData] = useState([]);
+  const [savedComicIDs, setsavedComicIDs] = useState(getSavedComicIDs());
   
   const handleSaveComic = async () => {
     
@@ -26,6 +28,7 @@ const Comic = () => {
         
         throw new Error('Save Comic API route failed');
       }
+      setsavedComicIDs([...savedComicIDs, oneComic._id]);
       console.log("comic saved!")
     } catch (err) {
       console.error(err);
@@ -52,6 +55,11 @@ const Comic = () => {
   useEffect(() => {
     getComicData();
   }, []);
+
+// Saves comic IDS to local storage when component unmounts
+  useEffect(() => {
+    return () => saveComicIDs(savedComicIDs);
+  });
    
   return (
     <section>
@@ -65,7 +73,10 @@ const Comic = () => {
             <h5> Created by <Link to={oneComic.authorLink} target="_blank" rel="noopener noreferrer"> {oneComic.authors}</Link> </h5>
             {Auth.loggedIn() ?
               (
-                <button onClick={() => handleSaveComic()} className='btn btn-info'>Add to Shelf</button>
+                <button onClick={() => handleSaveComic()}
+                className={savedComicIDs?.some((comicID) => comicID === oneComic._id) ? 'btn btn-info disabled' : 'btn btn-info'}>
+                  {savedComicIDs?.some((comicID) => comicID === oneComic._id) ? 'Shelved' : 'Add to Shelf'}
+                </button>
               ) : (
                 <> </>
               )}
