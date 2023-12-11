@@ -11,4 +11,11 @@
 
 h3{
     font-family: 'Chicle', serif;
+    font-size: 220%
+}
+
+.lib-card{
+    border-width: 8px;
+    border-style: outset;
+
 }

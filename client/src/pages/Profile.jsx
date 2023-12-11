@@ -2,12 +2,32 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import ComicCard from '../components/ComicCard';
 import RssFeed from '../components/RssFeed';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 import { saveComicIDs, getSavedComicIDs, removeComicIDs } from '../utils/localStorage';
 import { getMe, deleteComic, getOneComic } from '../utils/api';
 import Auth from '../utils/auth';
 
 import '../styles/Profile.css';
+
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+    slidesToSlide: 1 // optional, default to 1.
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+    slidesToSlide: 1 // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+    slidesToSlide: 1 // optional, default to 1.
+  }
+};
 
 const Profile = () => {
 
@@ -42,7 +62,7 @@ const Profile = () => {
   return (
     <main>
       <div className="w-75 d-flex">
-        <section className="row bg-secondary m-5 justify-content-between">
+        <section className="row m-5 text-center justify-content-between lib-card">
           <div className="col">
             <img className="reader-icon" src={userData.icon} />
           </div>
@@ -55,38 +75,51 @@ const Profile = () => {
             </h5>
           </div>
         </section>
-        {/* map this section */}
+
         <section className="row">
           <div className="col-6">
             {/* div for spacing */}
           </div>
         </section>
       </div>
-      <section className="">
-        <div className="row bg-secondary m-5 justify-content-around">
-          <div className="col m-3">
-            <h3 className="mb-3">My Comics</h3>
-              {loaded ?
-                <>
-                  {userData.savedComics.map((comic) => {
-                    return (
-                      <>
-                        <ComicCard
-                          src={comic.cover}
-                          title={<Link to={`/comic/${comic._id}`}>{comic.title}</Link>} />
-                      </>
-                    )
-                  })}
-                </>
-                : (<p>Loading...</p>)}
-          </div>
-          <div className="col m-3">
-            <h3 className="mb-3 text-end">What's new?</h3>
-            
-            {loaded ? (
-              <>
+      {/* This section is "below the fold" - comic data goes here*/}
+      <section className="text-center">
+        <h3 className="mb-3">My Comics</h3>
+        {loaded ?
+          <Carousel
+            swipeable={true}
+            draggable={true}
+            // centerMode={true}
+            showDots={false}
+            responsive={responsive}
+            ssr={true} // means to render carousel on server-side.
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={3000}
+            keyBoardControl={true}
+            customTransition="all .5"
+            transitionDuration={500}
+            containerClass="carousel-container"
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px align-items-start"
+          >
+            {userData.savedComics.map((comic) => {
+              return (
+                <ComicCard
+                  src={comic.cover}
+                  title={<Link to={`/comic/${comic._id}`}>{comic.title}</Link>} />
+              )
+            })}
+          </Carousel>
+          : (<p>Loading...</p>)}
+
+        <div className="m-3">
+          <h3 className="m-5">What's new?</h3>
+
+          {loaded ? (
+            <>
               {userData.savedComics.map((comic) => {
-                return(
+                return (
                   <div>
                     <h4 className="text-center mb-3">{comic.title}</h4>
                     <RssFeed url={comic.rss} reload={loaded} />
@@ -94,10 +127,10 @@ const Profile = () => {
                   </div>
                 )
               })}
-              </>
-            ): ( <p>loading...</p>)}
-          </div>
+            </>
+          ) : (<p>loading...</p>)}
         </div>
+
       </section>
     </main>
   );

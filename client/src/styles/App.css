@@ -21,7 +21,11 @@ button {
 
 /* Nav specific button styles */
 .custom-nav-btn{
-  background-color:#f7f0f0
+  background-color:#f7f0f0;
+}
+.custom-nav-btn:hover {
+  background-color: #FFBE28;
+  
 }
 
 body{
@@ -30,4 +34,8 @@ body{
 a{
   text-decoration: none;
   color: #F34213
+}
+
+a:hover{
+  color:#006a8a
 }

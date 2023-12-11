@@ -27,14 +27,14 @@ function RssFeed(props) {
     
 
     return (
-        <div className="container text-center">
+        <div className="container text-center bg-warning-subtle pt-2 border border-bottom-0 border-warning">
           {updates.map((item, i) => {
             return (
-                <div key={i} className="row">
-                    <div className="col mb-3">
+                <div key={i} className="row border-bottom border-primary-subtle">
+                    <div className="col m-2">
                         <p>{dayjs(item.item.pubDate).format('MM/DD/YY')}</p>
                     </div>
-                    <div className="col mb-3">
+                    <div className="col m-2">
                         <a target="_blank" rel="noopener noreferrer" href={item.item.link}>{item.item.title}</a>
                     </div>
                 </div>

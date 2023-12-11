@@ -1,4 +1,13 @@
 .title-img {
-    /* max-height: 70%; */
     border-radius: 15px;;
+}
+
+.custom-archive-button {
+    background-color:white;
+    text-decoration:none;
+    padding-top: 15px;
+}
+/* Makes specific text red for flavor */
+.flavor-text {
+    color:#F34213
 }

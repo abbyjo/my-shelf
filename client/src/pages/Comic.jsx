@@ -74,7 +74,7 @@ const Comic = () => {
             {Auth.loggedIn() ?
               (
                 <button onClick={() => handleSaveComic()}
-                className={savedComicIDs?.some((comicID) => comicID === oneComic._id) ? 'btn btn-info disabled' : 'btn btn-info'}>
+                className={savedComicIDs?.some((comicID) => comicID === oneComic._id) ? 'btn btn-warning disabled' : 'btn btn-warning'}>
                   {savedComicIDs?.some((comicID) => comicID === oneComic._id) ? 'Shelved' : 'Add to Shelf'}
                 </button>
               ) : (
@@ -82,15 +82,40 @@ const Comic = () => {
               )}
             <p className="mt-4"> {oneComic.description}</p>
             <div>
-              <h5> Genres List </h5>
-              <h5>TAG LIST</h5>
-              <a href={oneComic.homepage} target="_blank" rel="noopener noreferrer"><h5>Full Archive</h5></a>
+              <h5 className='flavor-text'>Genres</h5>
+              {loaded ? (
+                <ul className="list-group list-group-horizontal">
+                  {oneComic.genre.map((genre) => {
+                    return (
+                      <p className='list-group-item flex-fill'>{genre}</p>
+                    )
+                  })}
+                </ul>
+              ) : (<p> loading...</p>)
+              }
+              <h5 className='flavor-text'>Tags</h5>
+              {loaded ? (
+                <ul className="list-group">
+                  {oneComic.tags.map((tag) => {
+                    return (
+                      <p className='list-group-item mb-2'>{tag}</p>
+                    )
+                  })}
+                </ul>
+              ) : (<p> loading...</p>)
+              }
+              <button className="btn btn-warning custom-archive-button"><a 
+              href={oneComic.homepage}
+              target="_blank"
+              rel="noopener noreferrer">
+                <h5>Full Archive</h5>
+              </a></button>
             </div>
           </div>
         </div>
         <div className="row p-5 m-3">
           <div className="col">
-            <h5>Latest Updates</h5>
+            <h5 className='mb-4'>Latest Updates</h5>
             { loaded ? ( 
               <RssFeed url={oneComic.rss} reload={oneComic}/>
             ): (
