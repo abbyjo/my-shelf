@@ -4,9 +4,8 @@
 
 .reader-icon {
     max-width: 95%;
-    min-width: 85px ;
+    min-width: 200px ;
     object-fit: cover;
-    margin: 15px;
 }
 
 h3{

@@ -6,7 +6,7 @@ import Auth from '../utils/auth';
 import '../styles/SignUp.css';
 
 const Signup = () => {
-  const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '', icon:'defaultstring' });
+  const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '', icon:'/assets/icons/icon-1.png' });
   const [showAlert, setShowAlert] = useState(false);
 
   const handleInputChange = (event) => {
