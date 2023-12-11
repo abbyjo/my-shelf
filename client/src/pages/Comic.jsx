@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom'
 import RssFeed from '../components/RssFeed';
+import { FallingLines } from 'react-loader-spinner'
 
 import Auth from '../utils/auth';
 import { saveComic, getOneComic } from '../utils/api';
@@ -91,7 +92,12 @@ const Comic = () => {
                     )
                   })}
                 </ul>
-              ) : (<p> loading...</p>)
+              ) : (<FallingLines
+                color="#F34213"
+                width="100"
+                visible={true}
+                ariaLabel='falling-lines-loading'
+              />)
               }
               <h5 className='flavor-text'>Tags</h5>
               {loaded ? (
@@ -102,7 +108,12 @@ const Comic = () => {
                     )
                   })}
                 </ul>
-              ) : (<p> loading...</p>)
+              ) : (<FallingLines
+                color="#F34213"
+                width="100"
+                visible={true}
+                ariaLabel='falling-lines-loading'
+              />)
               }
               <button className="btn btn-warning custom-archive-button"><a 
               href={oneComic.homepage}
@@ -119,7 +130,12 @@ const Comic = () => {
             { loaded ? ( 
               <RssFeed url={oneComic.rss} reload={oneComic}/>
             ): (
-              <p>LOADING...</p>
+              <FallingLines
+            color="#F34213"
+            width="100"
+            visible={true}
+            ariaLabel='falling-lines-loading'
+          />
             )
               }
           </div>

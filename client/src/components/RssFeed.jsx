@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { FallingLines } from 'react-loader-spinner'
 import { getRSS } from '../utils/api';
 import dayjs from 'dayjs';
 
 function RssFeed(props) {
+    const [loaded, setLoad] = useState(false);
     const [updates, setUpdates] = useState([]);
     
     useEffect(() => {
@@ -15,9 +17,8 @@ function RssFeed(props) {
             }
             
             const comicUpdates = await response.json();
-            setUpdates(comicUpdates)
-            // console.log(comicUpdates)
-            console.log(updates)
+            setUpdates(comicUpdates);
+            setLoad(true);
           } catch (err) {
             console.error(err);
           }
@@ -25,7 +26,14 @@ function RssFeed(props) {
         getUpdates();
       }, [props.reload]);
     
-
+      if(!loaded){
+        return <FallingLines
+        color="#F34213"
+        width="100"
+        visible={true}
+        ariaLabel='falling-lines-loading'
+      />
+    }
     return (
         <div className="container text-center bg-warning-subtle pt-2 border border-bottom-0 border-warning">
           {updates.map((item, i) => {

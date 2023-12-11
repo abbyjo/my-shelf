@@ -4,6 +4,7 @@ import ComicCard from '../components/ComicCard';
 import RssFeed from '../components/RssFeed';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { FallingLines } from 'react-loader-spinner'
 
 import { saveComicIDs, getSavedComicIDs, removeComicIDs } from '../utils/localStorage';
 import { getMe, deleteComic, getOneComic } from '../utils/api';
@@ -111,7 +112,12 @@ const Profile = () => {
               )
             })}
           </Carousel>
-          : (<p>Loading...</p>)}
+          : (<FallingLines
+            color="#F34213"
+            width="100"
+            visible={true}
+            ariaLabel='falling-lines-loading'
+          />)}
 
         <div className="m-3">
           <h3 className="m-5">What's new?</h3>
@@ -128,7 +134,12 @@ const Profile = () => {
                 )
               })}
             </>
-          ) : (<p>loading...</p>)}
+          ) : (<FallingLines
+            color="#F34213"
+            width="100"
+            visible={true}
+            ariaLabel='falling-lines-loading'
+          />)}
         </div>
 
       </section>

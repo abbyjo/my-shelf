@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import ComicCard from './ComicCard';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { FallingLines } from 'react-loader-spinner'
 
 import { getComics } from '../utils/api';
 
@@ -25,6 +26,7 @@ const responsive = {
 };
 
 function ComicScroll(props) {
+    const [loaded, setLoad] = useState(false);
     const [comics, setComicData] = useState([]);
     useEffect(() => {
         const getArchive = async () => {
@@ -37,6 +39,7 @@ function ComicScroll(props) {
     
             const comics = await response.json();
             setComicData(comics);
+            setLoad(true)
 
           } catch (err) {
             console.error(err);
@@ -45,7 +48,15 @@ function ComicScroll(props) {
     
         getArchive();
       }, []);
-
+      
+if(!loaded){
+    return <FallingLines
+    color="#F34213"
+    width="100"
+    visible={true}
+    ariaLabel='falling-lines-loading'
+  />
+}
     return (
         <div>
             <Carousel
