@@ -33,8 +33,7 @@ const responsive = {
 const Profile = () => {
 
   const [userData, setUserData] = useState({});
-  // const [savedComicIDs, setsavedComicIDs] = useState(getSavedComicIDs());
-  const [myComicData, setMyComicData] = useState([]);
+  const [savedComicIDs, setsavedComicIDs] = useState([]);
   const [loaded, setLoad] = useState(false);
 
   const getUserData = async () => {
@@ -49,15 +48,26 @@ const Profile = () => {
       }
       const user = await response.json();
       setUserData(user);
-      setLoad(true)
+      setLoad(true);
+      syncComics();
 
     } catch (err) {
       console.error(err)
     }
   };
 
+  // Function to get saved comics from db upon first visiting login page
+  const syncComics = async () => {
+      let dbComics = await userData.savedComics;
+      let myComics = [];
+      dbComics.forEach((comic)=> {myComics.push(comic._id)});
+      setsavedComicIDs(myComics);
+      saveComicIDs(savedComicIDs);
+      console.log(savedComicIDs);
+  }
+
   useEffect(() => {
-    getUserData()
+    getUserData();
   }, []);
 
   return (
@@ -107,6 +117,7 @@ const Profile = () => {
             {userData.savedComics.map((comic) => {
               return (
                 <ComicCard
+                  key={comic._id}
                   src={comic.cover}
                   title={<Link to={`/comic/${comic._id}`}>{comic.title}</Link>} />
               )
@@ -126,10 +137,9 @@ const Profile = () => {
             <>
               {userData.savedComics.map((comic) => {
                 return (
-                  <div>
+                  <div key={comic._id}>
                     <h4 className="text-center mb-3">{comic.title}</h4>
                     <RssFeed url={comic.rss} reload={loaded} />
-                    <p></p>
                   </div>
                 )
               })}

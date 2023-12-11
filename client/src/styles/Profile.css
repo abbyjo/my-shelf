@@ -16,5 +16,5 @@ h3{
 .lib-card{
     border-width: 8px;
     border-style: outset;
-
+    border-radius: 10px;
 }
