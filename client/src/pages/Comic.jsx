@@ -66,7 +66,7 @@ const Comic = () => {
     <section>
       <div className="container text-center p-5">
         <div className="row">
-          <div className="col-sm-12 col-md-6">
+          <div className="col-sm-12 col-md-6 pe-5">
             <img className="title-img img-fluid" src={oneComic.cover}></img>
           </div>
           <div className="col-sm-12 col-md-6 text-wrap">
@@ -81,7 +81,7 @@ const Comic = () => {
               ) : (
                 <> </>
               )}
-            <p className="mt-4"> {oneComic.description}</p>
+            <p className="mt-4 comic-about"> {oneComic.description}</p>
             <div>
               <h5 className='flavor-text'>Genres</h5>
               {loaded ? (

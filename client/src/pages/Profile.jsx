@@ -116,10 +116,13 @@ const Profile = () => {
           >
             {userData.savedComics.map((comic) => {
               return (
-                <ComicCard
-                  key={comic._id}
-                  src={comic.cover}
-                  title={<Link to={`/comic/${comic._id}`}>{comic.title}</Link>} />
+                <>
+                  <ComicCard
+                    key={comic._id}
+                    src={comic.cover}
+                    title={<Link to={`/comic/${comic._id}`}>{comic.title}</Link>} />
+                  <button className="btn btn-warning btn-sm">Unshelve</button>
+                </>  
               )
             })}
           </Carousel>
