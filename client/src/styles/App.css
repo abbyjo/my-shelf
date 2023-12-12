@@ -1,17 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Taviraj', serif;
+  font-family: 'Montserrat', sans-serif;
   
 }
 
-h1{
+h1, h2{
   font-family: 'Chicle', serif;
 }
 
-h2{
-  font-family: 'Neuton', serif;
-}
 /* Global button styling */
 button {
   border-radius: 10px;
@@ -21,11 +18,20 @@ button {
 
 /* Nav specific button styles */
 .custom-nav-btn{
-  background-color:#f7f0f0;
+  background-color:rgba(0, 0, 0, 0.586);
+  color:#e24a1f;
+  border: 1px solid #b53714;
+  overflow: hidden;
+  transition: 0.2s;
+  font-weight: bold;
+  
 }
 .custom-nav-btn:hover {
-  background-color: #FFBE28;
-  
+  background-color: black;
+  color: #fbd378;
+  border: 1px solid #fbd378;
+  box-shadow: 0 0 10px #fbd378, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: .2s;  
 }
 
 body{

@@ -9,3 +9,7 @@
 .site-logo {
     max-width: 70%;
 }
+
+.home-link:hover {
+    color:#FFBE28
+}

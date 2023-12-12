@@ -8,7 +8,7 @@ const Header = () => {
             <div className="row mb-1">
                 <div className="col">
                     <Link to="/">
-                        <h1>myShelf</h1>
+                        <h1 className="home-link">myShelf</h1>
                     </Link>
                 </div>
                 <div className="col position-relative text-end">

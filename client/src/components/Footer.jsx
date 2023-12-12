@@ -9,14 +9,14 @@ const styles = {
     spacer: {
         display: 'block',
         padding: '20px',
-        height: '60px',
+        height: '150px',
         width: '100%',
     }
 };
 
 function Footer() {
     return(
-        <>
+      <footer>
         <div style={styles.spacer}></div>
         <section style={styles.div} className="p-2">  
           <div className="d-flex justify-content-between">
@@ -24,7 +24,7 @@ function Footer() {
             <a className="pe-4" href="https://github.com/abbyjo/my-shelf" target="_blank" rel="noopener noreferrer"> <h1 style={styles.title}>GitHub</h1> </a>
           </div>  
         </section>
-        </>
+      </footer>
     )
 };
 
