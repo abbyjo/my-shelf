@@ -24,11 +24,11 @@ router.route('/login').post(login);
 // Gets logged in user's specific information
 router.route('/me').get(authMiddleware, getMyReader);
 
-// "myshelf.com/api/readers/:reader-id"
+// "myshelf.com/api/readers/:readerID"
 // Gets a specific reader's data by ID 
 router.route('/:readerID').get(getMyReader).put(editReader);
 
-// "myshelf.com/api/readers/:reader-id"
+// "myshelf.com/api/readers/:comicID"
 // By comic-id: if logged in, removes specific comic by ID (from reader's shelf)
 router.route('/:comicID').delete(authMiddleware, removeComic);
 

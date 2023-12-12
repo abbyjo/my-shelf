@@ -47,7 +47,7 @@ export const saveComic = (comicData, token) => {
   
 // remove saved book data for a logged in user
 export const removeComic = (comicID, token) => {
-    return fetch(`/api/users/books/${comicID}`, {
+    return fetch(`/api/readers/${comicID}`, {
       method: 'DELETE',
       headers: {
         authorization: `Bearer ${token}`,

@@ -88,7 +88,7 @@ const Comic = () => {
                 <ul className="list-group list-group-horizontal">
                   {oneComic.genre.map((genre) => {
                     return (
-                      <p className='list-group-item flex-fill'>{genre}</p>
+                      <p key={genre} className='list-group-item flex-fill'>{genre}</p>
                     )
                   })}
                 </ul>
@@ -104,7 +104,7 @@ const Comic = () => {
                 <ul className="list-group">
                   {oneComic.tags.map((tag) => {
                     return (
-                      <p className='list-group-item mb-2'>{tag}</p>
+                      <p key={tag} className='list-group-item mb-2'>{tag}</p>
                     )
                   })}
                 </ul>

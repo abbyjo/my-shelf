@@ -6,8 +6,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FallingLines } from 'react-loader-spinner'
 
-import { saveComicIDs, getSavedComicIDs, removeComicIDs } from '../utils/localstorage';
-import { getMe, deleteComic, getOneComic } from '../utils/api';
+import { saveComicIDs, removeComicIDs } from '../utils/localstorage';
+import { getMe, removeComic } from '../utils/api';
 import Auth from '../utils/auth';
 
 import '../styles/Profile.css';
@@ -49,7 +49,7 @@ const Profile = () => {
       const user = await response.json();
       setUserData(user);
       setLoad(true);
-      syncComics();
+      // syncComics();
 
     } catch (err) {
       console.error(err)
@@ -65,6 +65,26 @@ const Profile = () => {
       saveComicIDs(savedComicIDs);
       console.log(savedComicIDs);
   }
+
+  const handleUnshelve = async(comicID) => {
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
+    if (!token) { return false }
+    
+    try {
+      const response = await removeComic(comicID, token)
+
+      if (!response.ok) {
+        throw new Error('Unable to remove comic from db!');
+      }
+
+      const updatedUser = await response.json();
+      setUserData(updatedUser.updatedReader);
+      removeComicIDs(comicID);
+            
+    } catch (err) {
+      console.error(err)
+    }
+  };
 
   useEffect(() => {
     getUserData();
@@ -121,7 +141,7 @@ const Profile = () => {
                     key={comic._id}
                     src={comic.cover}
                     title={<Link to={`/comic/${comic._id}`}>{comic.title}</Link>} />
-                  <button className="btn btn-warning btn-sm">Unshelve</button>
+                  <button key={`${comic.title}-btn`} onClick={() => handleUnshelve(comic._id)} className="btn btn-warning btn-sm">Unshelve</button>
                 </>  
               )
             })}
@@ -140,7 +160,7 @@ const Profile = () => {
             <>
               {userData.savedComics.map((comic) => {
                 return (
-                  <div key={comic._id}>
+                  <div key={comic.title}>
                     <h4 className="text-center mb-3">{comic.title}</h4>
                     <RssFeed url={comic.rss} reload={loaded} />
                   </div>

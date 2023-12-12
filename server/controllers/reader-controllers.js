@@ -113,9 +113,9 @@ async function removeComic({user, params}, res){
     try {
         const updatedReader = await Reader.findOneAndUpdate(
             { _id: user._id },
-            { $pull: {savedComics: { _id: params.comicID } }},
+            { $pull: {savedComics: params.comicID }},
             { new: true }
-        );
+        ).populate('savedComics');
 
         if(!updatedReader) {
             return res.status(404).json({ message: "No user with that ID found :-("})
