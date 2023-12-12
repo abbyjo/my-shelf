@@ -6,7 +6,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FallingLines } from 'react-loader-spinner'
 
-import { saveComicIDs, getSavedComicIDs, removeComicIDs } from '../utils/localStorage';
+import { saveComicIDs, getSavedComicIDs, removeComicIDs } from '../utils/localstorage';
 import { getMe, deleteComic, getOneComic } from '../utils/api';
 import Auth from '../utils/auth';
 

@@ -5,7 +5,7 @@ import { FallingLines } from 'react-loader-spinner'
 
 import Auth from '../utils/auth';
 import { saveComic, getOneComic } from '../utils/api';
-import { saveComicIDs, getSavedComicIDs } from '../utils/localStorage';
+import { saveComicIDs, getSavedComicIDs } from '../utils/localstorage';
 
 import '../styles/ComicPage.css';
 
