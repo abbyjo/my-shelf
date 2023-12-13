@@ -19,7 +19,7 @@ const Header = () => {
             </div>
             <div className="row">
                 <div className="col-sm-9 col-md-9 col">
-                    <img className="site-logo" src="https://civilrights.msu.edu/_assets/images/placeholder/placeholder-200x200.jpg"></img>
+                    {/* <img className="site-logo" src="https://civilrights.msu.edu/_assets/images/placeholder/placeholder-200x200.jpg"></img> */}
                 </div>
             </div>
         </header>

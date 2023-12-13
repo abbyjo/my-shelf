@@ -29,6 +29,8 @@ To remove a comic from your page simply click the "Unshelve" button below each c
 + [This video](https://www.youtube.com/watch?v=cPOFttS3-CI&ab_channel=Mind-Boggling) helped me utilize rss-parser.
 +  Header photo by <a href="https://unsplash.com/@diesektion?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Robert Anasch</a> on <a href="https://unsplash.com/photos/assorted-color-filling-book-lot-McX3XuJRsUM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
++ Icons by Abby Johnson
+
 ## Technologies
 
 + Vite

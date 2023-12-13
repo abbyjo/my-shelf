@@ -4,6 +4,7 @@
     background-size: cover;
     padding: 5%;
     padding-top: 2%;
+    min-height: 250px;
 }
 
 .site-logo {
