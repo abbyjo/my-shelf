@@ -114,10 +114,10 @@ const Signup = () => {
                 type="radio" 
                 name="icon" 
                 id="icon-3" 
-                value="test-3"
+                value="/assets/icons/icon-3.png"
                 onChange={handleInputChange} 
               />
-              <label className="form-check-label" htmlFor="icon-3"><img className="reader-icon" src="https://civilrights.msu.edu/_assets/images/placeholder/placeholder-200x200.jpg" /></label>
+              <label className="form-check-label" htmlFor="icon-3"><img className="reader-icon" src="/assets/icons/icon-3.png" /></label>
             </div>
             <div className="form-check form-check-inline">
               <input 
@@ -125,21 +125,10 @@ const Signup = () => {
                 type="radio" 
                 name="icon" 
                 id="icon-4" 
-                value="test-4"
+                value="/assets/icons/icon-4.png"
                 onChange={handleInputChange} 
               />
-              <label className="form-check-label" htmlFor="icon-4"><img className="reader-icon" src="https://civilrights.msu.edu/_assets/images/placeholder/placeholder-200x200.jpg" /></label>
-            </div>
-            <div className="form-check form-check-inline">
-              <input 
-                className="form-check-input" 
-                type="radio" 
-                name="icon" 
-                id="icon-5" 
-                value="test-5"
-                onChange={handleInputChange}
-              />
-              <label className="form-check-label" htmlFor="icon-5"><img className="reader-icon" src="https://civilrights.msu.edu/_assets/images/placeholder/placeholder-200x200.jpg"></img></label>
+              <label className="form-check-label" htmlFor="icon-4"><img className="reader-icon" src="/assets/icons/icon-4.png" /></label>
             </div>
           </div>
           <div className="col my-3">
