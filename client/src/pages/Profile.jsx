@@ -98,8 +98,8 @@ const Profile = () => {
             <img className="reader-icon" src={userData.icon} />
           </div>
           <div className="col m-3">
-            <h3 className="mb-3">{userData.username}'s Shelf</h3>
-            <h5>
+            <h3 className="">{userData.username}'s Shelf</h3>
+            <h5 className='flavor-text'>
               {userData.comicCount >= 1 ? (
                 `Has ${userData.comicCount} ${userData.comicCount === 1 ? 'comic' : 'comics'}`
               ) : (`Needs some comics!`)}
@@ -108,14 +108,18 @@ const Profile = () => {
         </section>
 
         <section className="row">
-          <div className="col-6">
+          <div id="spacer" className="col-6">
             {/* div for spacing */}
           </div>
         </section>
       </div>
+      <div id="gradient"></div>
       {/* This section is "below the fold" - comic data goes here*/}
+      
       <section className="text-center">
-        <h3 className="mb-3">My Comics</h3>
+        {userData.comicCount >= 1 ? (
+         <h3 className="mb-3">My Comics</h3>
+        ) : (<h3 className="mb-3">Click myShelf up above to explore!</h3>)}
         {loaded ?
           <Carousel
             swipeable={true}
@@ -153,15 +157,21 @@ const Profile = () => {
             ariaLabel='falling-lines-loading'
           />)}
 
-        <div className="m-3">
-          <h3 className="m-5">What's new?</h3>
-
+        <div className="">
+          {userData.comicCount >= 1 ? (
+            <>
+            <div id="gradient"></div>
+            <h3 className="m-5">What's new?</h3>
+            </>
+            
+          ) : (<div></div>)}
+          
           {loaded ? (
             <>
               {userData.savedComics.map((comic) => {
                 return (
-                  <div key={comic.title}>
-                    <h4 className="text-center mb-3">{comic.title}</h4>
+                  <div className='m-3' key={comic.title}>
+                    <h4 className="text-center mt-5 mb-4 comis-title">{comic.title}</h4>
                     <RssFeed url={comic.rss} reload={loaded} />
                   </div>
                 )

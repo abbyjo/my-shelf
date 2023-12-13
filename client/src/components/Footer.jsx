@@ -1,4 +1,3 @@
-import { Link, useLocation } from 'react-router-dom';
 const styles = {
     div: {
         background: "#FFBE28",

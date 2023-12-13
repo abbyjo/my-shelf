@@ -9,7 +9,8 @@
 }
 /* Makes specific text red for flavor */
 .flavor-text {
-    color:#F34213
+    color:#F34213;
+    font-weight: bold
 }
 
 .comic-about {

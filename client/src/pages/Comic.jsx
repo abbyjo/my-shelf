@@ -70,8 +70,8 @@ const Comic = () => {
             <img className="title-img img-fluid" src={oneComic.cover}></img>
           </div>
           <div className="col-sm-12 col-md-6 text-wrap">
-            <h2> {oneComic.title} </h2>
-            <h5> Created by <Link to={oneComic.authorLink} target="_blank" rel="noopener noreferrer"> {oneComic.authors}</Link> </h5>
+            <h2 className='mt-4'> {oneComic.title} </h2>
+            <h5> Created by <Link className='flavor-text' to={oneComic.authorLink} target="_blank" rel="noopener noreferrer"> {oneComic.authors}</Link> </h5>
             {Auth.loggedIn() ?
               (
                 <button onClick={() => handleSaveComic()}
@@ -83,7 +83,7 @@ const Comic = () => {
               )}
             <p className="mt-4 comic-about"> {oneComic.description}</p>
             <div>
-              <h5 className='flavor-text'>Genres</h5>
+              <h5 className='flavor-text mt-4'>Genres</h5>
               {loaded ? (
                 <ul className="list-group list-group-horizontal">
                   {oneComic.genre.map((genre) => {
@@ -99,7 +99,7 @@ const Comic = () => {
                 ariaLabel='falling-lines-loading'
               />)
               }
-              <h5 className='flavor-text'>Tags</h5>
+              <h5 className='flavor-text mt-4'>Tags</h5>
               {loaded ? (
                 <ul className="list-group">
                   {oneComic.tags.map((tag) => {
@@ -115,11 +115,11 @@ const Comic = () => {
                 ariaLabel='falling-lines-loading'
               />)
               }
-              <button className="btn btn-warning custom-archive-button"><a 
+              <button className="btn btn-warning custom-archive-button mt-4"><a 
               href={oneComic.homepage}
               target="_blank"
               rel="noopener noreferrer">
-                <h5>Full Archive</h5>
+                <h5 className='flavor-text'>Full Archive</h5>
               </a></button>
             </div>
           </div>
