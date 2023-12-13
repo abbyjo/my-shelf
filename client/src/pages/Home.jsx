@@ -5,7 +5,7 @@ const Home = () => {
 
     return (
       <main>
-        <Search />
+        
         {/* <h4 className="text-center mt-5">Recently Added Webcomics</h4> */}
         <div className="mt-5"></div>
         <ComicScroll 

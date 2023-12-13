@@ -5,6 +5,7 @@ import RssFeed from '../components/RssFeed';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FallingLines } from 'react-loader-spinner'
+import ScrollToTop from "react-scroll-to-top";
 
 import { saveComicIDs, removeComicIDs } from '../utils/localstorage';
 import { getMe, removeComic } from '../utils/api';
@@ -186,6 +187,7 @@ const Profile = () => {
         </div>
 
       </section>
+      <ScrollToTop smooth />
     </main>
   );
 };
