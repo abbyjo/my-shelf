@@ -88,5 +88,89 @@
         "genre": ["Action", "Supernatural", "Adventure", "Fantasy"],
         "tags": ["gods", "ghosts", "lgbt+", "dark humor"],
         "rss": "https://www.phantomarine.com/comic/rss"
+    },
+    {
+        "authors": ["Niyahet"],
+        "authorLink" : "https://comicfury.com/profile.php?username=Niyahet",
+        "mirrors": [""],
+        "description": "A young man travels to care for his mysteriously ailing uncle in a small mountain town on the outskirts of everywhere. (18+) Content not suitable for minors.",
+        "cover": "https://img.comicfury.com/comics/218/50046a1624806968b81530f685788109.png",
+        "homepage": "https://brynberry.thecomicseries.com/",
+        "title": "Brynberry",
+        "genre": ["Horror", "Supernatural", "Drama", "Thriller"],
+        "tags": ["cowboys", "slow burn", "lgbt+", "western"],
+        "rss": "https://brynberry.thecomicseries.com/rss"
+    },
+    {
+        "authors": ["Michelle Fus"],
+        "authorLink" : "https://tinypaint.tumblr.com/",
+        "mirrors": [""],
+        "description": "Ava's Demon is about a girl named Ava and the demon haunting her. The demon, however, might just be the ghost of an alien queen, Wrathia, seeking revenge on the one that destroyed her empire, a god-like figure named Titan. The story follows Ava as she makes her way across the universe, teaming up with Wrathia on a quest for revenge, while fighting her inner demons along the way.",
+        "cover": "https://64.media.tumblr.com/2583d152c2e50d828e00d552f6a040e7/34630f670914edb1-a5/s1280x1920/09fbc3bc5f84b1d06bd4d574f31d7a09d052bc27.jpg",
+        "homepage": "https://www.avasdemon.com/",
+        "title": "Ava's Demon",
+        "genre": ["Supernatural", "Adventure", "Drama", "Sci-fi", "Fantasy"],
+        "tags": ["colorful", "ghosts & demons", "lgbt+", "violent"],
+        "rss": "http://feeds.feedburner.com/AvasDemon"
+    },
+    {
+        "authors": ["Ashley Cope"],
+        "authorLink" : "https://unsoundedcomic.tumblr.com/",
+        "mirrors": [""],
+        "description": "Daughter of the Lord of Thieves, Sette Frummagem is on a mission, and she'll lie, cheat, and steal to make sure it's a success (she'll lie, cheat, and steal anyway). Condemned to aid her in her rotten endeavours is a rotten corpse who seems oddly talented with the supernatural, and oddly not laying motionless in the dirt.        The road is long and no one is what they seem. Never trust a thief, and never trust anyone who won't let you look into their eyes.",
+        "cover": "https://www.casualvillain.com/Unsounded/comic/ch01/pageart/ch01_01.jpg",
+        "homepage": "http://www.casualvillain.com/Unsounded/comic+index/",
+        "title": "Unsounded",
+        "genre": ["Action", "Epic", "Adventure", "Fantasy"],
+        "tags": ["magic", "thieves"],
+        "rss": "https://unsoundedupdates.tumblr.com/rss"
+    },
+    {
+        "authors": ["Abbadon"],
+        "authorLink" : "https://twitter.com/orbitaldropkick",
+        "mirrors": [""],
+        "description": "Far beyond Earth, the multiverse is in chaos as criminals rule and callous kings maintain a fragile peace. One day, a mysterious and bloody figure appears to a woman named Allison and bestows her with a legendary artifact known as a Key of Kings. By doing so, he transports her into Throne, a land as mysterious as it is bizarre. But when rumors about the Key begin to spread, Allison must not only learn to face herself, but ensure the security of the world at large.",
+        "cover": "http://killsixbilliondemons.com/wp-content/uploads/2016/06/cover1.jpg",
+        "homepage": "https://killsixbilliondemons.com/",
+        "title": "Kill Six Billion Demons",
+        "genre": ["Action", "Supernatural", "Adventure", "Fantasy", "Epic"],
+        "tags": ["gods", "angels", "lgbt+", "demons", "kick-assery", "religious", "philosophical"],
+        "rss": "https://killsixbilliondemons.com/feed/"
+    },
+    {
+        "authors": ["Varethane"],
+        "authorLink" : "https://twitter.com/varethane",
+        "mirrors": [""],
+        "description": "Over twenty years after the world was invaded and then rescued from a terrifying alien force, humanity has begun to master the strange magic their enemy left behind. After spearheading the wartime research efforts, an organization called Wychwood has become the leading authority on magic and is aggressively hunting for new things to study.This is kind of a bad thing for Tiara, a delinquent who has been using a mysterious power to goof around for years without realizing the kind of attention it could attract.",
+        "cover": "https://wychwoodcomic.com/comics/wychwood_000.jpg",
+        "homepage": "https://www.wychwoodcomic.com/",
+        "title": "Wychwood",
+        "genre": ["Action", "Post-Apocolypse", "Adventure", "Sci-fi"],
+        "tags": ["aliens", "magic", "lgbt+", "dark themes"],
+        "rss": "https://www.wychwoodcomic.com/comic/rss"
+    },
+    {
+        "authors": ["FionaCreates"],
+        "authorLink" : "https://fionacreates.net/",
+        "mirrors": [""],
+        "description": "Ladies of the Knight is a collection of works featuring the valiant and noble beknighted ladies of a quasi historical League of Knights. The League is a remnant of when knights were soldiers, only such acts of war are no longer necessary so the skills remain as sports and the Knights are famous, and bountiful participants (if you’re good at it that is!)",
+        "cover": "https://ladiesoftheknightcomic.com/wp-content/uploads/2019/11/cweb-1.png",
+        "homepage": "https://ladiesoftheknightcomic.com/",
+        "title": "Ladies of the Knight",
+        "genre": ["Action", "Fantasy", "Drama"],
+        "tags": ["female knights", "medieval", "lgbt+"],
+        "rss": "https://ladiesoftheknightcomic.com/?feed=rss2"
+    },
+    {
+        "authors": ["Reimena Yee"],
+        "authorLink" : "https://reimenayee.com/",
+        "mirrors": [""],
+        "description": "The 21st century graphic novel retelling of the Alexander Romance, a historical-fantastical account about the life, deeds and legends of Alexander the Great. Fearing death, Alexander, alongside his most trustworthy servant, embarks on a metaphysical quest for the immortal waters of life, as told and muddied by the artistry of poets and painters in centuries past.",
+        "cover": "https://reimenayee.com/wp-content/uploads/2023/10/AlexanderComicCover1.png",
+        "homepage": "https://alexanderromance.com/",
+        "title": "Alexander, the Servant & the Water of Life",
+        "genre": ["Action", "Historical", "Epic", "Drama"],
+        "tags": ["historical figures", "ancient times", "lgbt+", "fables"],
+        "rss": "https://alexanderromance.com/comic/rss"
     }
 ]
