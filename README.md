@@ -7,7 +7,7 @@ Version 1.0 is a simple proof of concept for my ideas and mainly allowed me to s
 
 ## Usage 
 
-Visit the deployed page [here](my-comic-shelf.onrender.com/)!
+Visit the deployed page [here](https://my-comic-shelf.onrender.com/)!
 On load, you will see the currently archived comics load on the front page.
 The scrollers will move automatically however you can click the arrows on either side of the screen to look through it yourself.
 When you click on a comic's title you'll be taken to a page with more information on that comic including links to where you can read the comic and find the creators!
@@ -20,7 +20,7 @@ Navigating back to your profile, your comics will appear along with the most rec
 
 To remove a comic from your page simply click the "Unshelve" button below each comic thumbnail on your profile page.
 
-![Screenshot of landing page]()
+![Screenshot of landing page](https://i.gyazo.com/5fa1b238e765dd8a99dbada72799cb6a.jpg)
 
 ## Credits 
 
@@ -39,10 +39,14 @@ To remove a comic from your page simply click the "Unshelve" button below each c
 + Render 
 + React
 + React Router
++ JWT
 + NPM
 + react-multi-carousel
 + react-scroll-to-top
 + rss-parser
++ dayjs
++ react-loader-spinner
++ nodemon
 
 ## License
 MIT
